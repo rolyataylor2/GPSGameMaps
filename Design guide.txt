@@ -1,0 +1,1 @@
+This GPS game is designed to run in the browser
