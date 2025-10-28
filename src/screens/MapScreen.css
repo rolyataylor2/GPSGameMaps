@@ -1,0 +1,28 @@
+.map-screen {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  height: 100%;
+}
+
+.map-screen__grid {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.map-screen__side {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .map-screen {
+    grid-template-columns: 1fr;
+  }
+
+  .map-screen__side {
+    grid-template-rows: auto auto;
+  }
+}

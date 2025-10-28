@@ -1,0 +1,46 @@
+:root {
+  color-scheme: dark;
+  font-family: 'Press Start 2P', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: #0f0f0f;
+  color: #f1f1f1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #2c2f45 0%, #050506 65%);
+}
+
+button {
+  font-family: inherit;
+}
+
+h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+  font-family: inherit;
+}
+
+.main-card {
+  border-radius: 24px;
+  background: rgba(12, 12, 12, 0.78);
+  padding: 1rem;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.45);
+}
+
+.section-title {
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+}
+
+.subtle-text {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}

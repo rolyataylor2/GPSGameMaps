@@ -1,0 +1,77 @@
+.map-grid {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  background: radial-gradient(circle at center, rgba(48, 52, 78, 0.7), rgba(12, 15, 28, 0.9));
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.map-grid__background {
+  position: absolute;
+  inset: 0;
+  background-size: 256px;
+  opacity: 0.25;
+  filter: saturate(0.6);
+}
+
+.map-grid__cell {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.map-grid__cell:not(.is-player):hover,
+.map-grid__cell:not(.is-player):focus-visible {
+  z-index: 2;
+  transform: scale(1.05) translateZ(0);
+  background: rgba(127, 255, 212, 0.35);
+}
+
+.map-grid__cell.is-player {
+  background: rgba(127, 255, 212, 0.55);
+  border-color: rgba(127, 255, 212, 0.9);
+}
+
+.map-grid__cell-label {
+  font-size: 1.5rem;
+}
+
+.map-grid__coords {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+.map-grid__coords strong {
+  letter-spacing: 0.1rem;
+}
+
+.map-grid__overlay {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 6, 12, 0.92);
+  color: #e9e9e9;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.map-grid__overlay.error {
+  color: #ff8383;
+}
