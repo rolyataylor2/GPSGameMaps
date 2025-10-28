@@ -1,0 +1,84 @@
+.inventory-screen {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  height: 100%;
+}
+
+.inventory-screen__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.75rem;
+}
+
+.inventory-card {
+  display: grid;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 0.75rem;
+}
+
+.inventory-card header {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.inventory-card header span {
+  font-size: 1.5rem;
+}
+
+.inventory-card p {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.inventory-card footer {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.inventory-screen__details {
+  display: grid;
+  gap: 1rem;
+}
+
+.inventory-screen__collectable-body {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.inventory-screen__collectable-icon {
+  font-size: 2.5rem;
+}
+
+.inventory-screen__crafting ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.inventory-screen__theme-selector select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+  color: inherit;
+}
+
+@media (max-width: 900px) {
+  .inventory-screen {
+    grid-template-columns: 1fr;
+  }
+}

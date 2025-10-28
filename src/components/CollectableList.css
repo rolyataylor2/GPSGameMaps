@@ -1,0 +1,62 @@
+.collectable-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.collectable-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.collectable-list li button {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  color: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.collectable-list li button:hover,
+.collectable-list li button:focus-visible {
+  background: rgba(127, 255, 212, 0.18);
+  transform: translateY(-2px);
+}
+
+.collectable-list__icon {
+  font-size: 1.75rem;
+}
+
+.collectable-list small {
+  display: block;
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-top: 0.25rem;
+}
+
+.collectable-list__rarity {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+}
+
+.collectable-list__rarity--common {
+  color: #8be9d0;
+}
+
+.collectable-list__rarity--rare {
+  color: #a889ff;
+}
+
+.collectable-list__rarity--epic {
+  color: #ffb86c;
+}

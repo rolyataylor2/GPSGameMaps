@@ -1,0 +1,126 @@
+.theme-editor {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1rem;
+  height: 100%;
+}
+
+.theme-editor__sidebar {
+  display: grid;
+  gap: 0.75rem;
+  height: fit-content;
+}
+
+.theme-editor__sidebar select,
+.theme-editor__sidebar input {
+  width: 100%;
+  padding: 0.65rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+  color: inherit;
+}
+
+.theme-editor__create {
+  padding: 0.65rem;
+  border-radius: 999px;
+  border: none;
+  background: rgba(127, 255, 212, 0.3);
+  color: #041018;
+  cursor: pointer;
+}
+
+.theme-editor__main {
+  display: grid;
+  gap: 1rem;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.theme-editor__panel {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.theme-editor__panel label {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.theme-editor__panel input,
+.theme-editor__panel textarea,
+.theme-editor__panel select {
+  padding: 0.6rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.35);
+  color: inherit;
+}
+
+.theme-editor__panel textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.theme-editor__labels {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 16px;
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.theme-editor__labels span {
+  font-size: 0.75rem;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.theme-editor__list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.theme-editor__list fieldset {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 0.75rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.theme-editor__list legend {
+  padding: 0 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.theme-editor__actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 1rem;
+}
+
+.theme-editor__save {
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #7fffd4, #5b8bff);
+  color: #041018;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 960px) {
+  .theme-editor {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-editor__main {
+    order: -1;
+  }
+}

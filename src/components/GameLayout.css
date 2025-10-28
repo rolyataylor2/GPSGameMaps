@@ -1,0 +1,74 @@
+.game-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  padding: 1.5rem;
+}
+
+.game-shell__bezel {
+  width: min(960px, 95vw);
+  height: min(720px, 95vh);
+  background: rgba(24, 24, 24, 0.85);
+  border: 12px solid;
+  border-radius: 32px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+}
+
+.game-shell__header {
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #f7f7f7;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.game-shell__header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.game-shell__viewport {
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.game-shell__nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.game-shell__nav button {
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.game-shell__nav button:hover,
+.game-shell__nav button:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.game-shell__nav button.active {
+  background: rgba(255, 255, 255, 0.35);
+  color: #121212;
+}
